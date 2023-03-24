@@ -53,7 +53,7 @@
 ***
 
 ## Backend
-[ссылка на репозиторий](https://github.com/hel-sidoruk/rs-clone-server)
+[ссылка на репозиторий](https://github.com/hel-sidoruk/codewars-clone-server)
 
 ***
 
