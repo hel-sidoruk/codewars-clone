@@ -1,0 +1,22 @@
+.kata-loader {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--modal-overlay);
+  flex-direction: column;
+  font-size: 28px;
+  line-height: 40px;
+  color: var(--contrast-text);
+  gap: 30px;
+  letter-spacing: 1px;
+  .loader {
+    position: unset;
+    transform: translate(0);
+  }
+}

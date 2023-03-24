@@ -1,0 +1,107 @@
+.tests {
+  background-color: var(--similar-color);
+  border: 2px solid var(--border-color);
+  flex-grow: 1;
+  color:var(--contrast-text);
+  border-radius: 8px;
+  overflow: hidden;
+  max-height: calc(100vh - 250px);
+  &.success {
+    border-color: $success;
+  }
+  &.failure {
+    border-color: $red;
+  }
+  &__results {
+    border-left: 5px solid $success;
+    padding-left: 10px;
+    margin: 11px 0;
+    letter-spacing: 1px;
+    font-weight: 500;
+    font-size: 14px;
+    color: var(--contrast-text);
+    line-height: 18px;
+    &.error {
+      border-color: $red;
+    }
+  }
+  &__output {
+    padding: 16px;
+    overflow-y: auto;
+    height: calc(100% - 46px);
+    @include scrollBar(8px);
+  }
+  &__text {
+    color: var(--grey-text);
+    p {
+      line-height: 1.6;
+    }
+    .success,
+    .fail {
+      margin-left: 8px;
+      background-position: left center;
+      background-size: 16px 16px;
+      background-repeat: no-repeat;
+      font-weight: 700;
+      margin-bottom: 8px;
+      padding-left: 20px;
+    }
+    .success {
+      background-image: url('/success.svg');
+    }
+    .fail {
+      background-image: url('/error.svg');
+    }
+  }
+  &__congrats {
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    padding: 16px;
+    border: 1px dashed $success;
+    margin-top: 32px;
+    color: $success;
+  }
+  &__stats {
+    border-bottom: 1px solid var(--border-color);
+    display: flex;
+    padding: 16px;
+    gap: 4px;
+    color: var(--contrast-text);
+    .time {
+      margin-right: 4px;
+    }
+  }
+}
+.red {
+  color: $red;
+}
+.green {
+  color: $success;
+}
+.suite {
+  margin: 4px 0;
+  padding: 4px 0;
+  color: var(--contrast-text);
+  &__top {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    svg {
+      width: 16px;
+      height: 16px;
+      transition: transform .1s ease-in-out;
+    }
+  }
+  &__content {
+    display: none;
+  }
+  &.opened {
+    svg {
+      transform: rotate(90deg);
+    }
+    .suite__content {
+      padding-top: 8px;
+      display: block;
+    }
+  }
+}

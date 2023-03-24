@@ -1,0 +1,341 @@
+.home {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #16171b;
+  padding-top: 150px;
+  @include noiseBackground;
+  color: $light;
+  
+  & ~ footer.footer {
+    background-color: #16171b;
+  }
+
+  .container {
+    max-width: 1310px;
+    margin: 0 auto;
+    padding: 0 15px;
+
+    &_small {
+      max-width: 896px;
+      padding-top: 96px;
+      padding-bottom: 48px;
+      @media (max-width: $s) {
+       padding: 40px 0;
+      }
+    }
+  }
+
+  &__hero {
+    min-height: 85vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 110px;
+    @media (max-width: $s) {
+      padding-bottom: 40px;
+    }
+  }
+
+  &__title {
+    font-size: 80px;
+    line-height: 1.1;
+    font-family: 'InputSans';
+    text-align: center;
+    white-space: break-spaces;
+    font-weight: 300;
+    margin-bottom: 24px;
+    @media (max-width: $s) {
+      font-size: 60px;
+    }
+
+    span {
+      background: linear-gradient(90deg, #f29871, #ff4d4d);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+  }
+
+  .text {
+    font-weight: 300;
+    font-family: 'IBMPlexSans', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.5;
+
+    @media (max-width: $s) {
+      font-size: 1.15rem;
+    }
+  }
+
+  .subtitle {
+    margin: 24px 0;
+    font-family: 'InputSans', sans-serif;
+    font-size: 30px;
+    line-height: 1.25;
+    font-weight: 400;
+  }
+
+  .text-icon {
+    background-color: #454549;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 56px;
+    height: 56px;
+    border-radius: 8px;
+    @include noiseBackground;
+
+    @media (max-width: $s) {
+      width: 30px;
+      height: 30px;
+
+      svg {
+        width: 16px;
+        height: 16px;
+      }
+    }
+  }
+
+  &__text {
+    margin-bottom: 32px;
+    font-size: 24px;
+    line-height: 36px;
+    white-space: break-spaces;
+    text-align: center;
+  }
+
+  &__btn {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #ff4d4d;
+    transition: opacity .2s ease;
+    font-family: 'InputSans', sans-serif;
+    color: #16171b;
+    font-weight: 400;
+    font-size: 16px;
+    text-align: center;
+    letter-spacing: 0.04em;
+    padding: 13px 32px;
+    &.small {
+      font-size: 14px;
+      color: #fff;
+      padding: 8px 20px 6px;
+      background-color: transparent;
+      line-height: 21px;
+      border: 1px solid #fff;
+    }
+    &:hover {
+      opacity: 0.6;
+    }
+  }
+
+  &__buttons {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__text-block {
+    padding: 30px;
+
+    @media (max-width: $l) {
+      padding: 20px;
+    }
+
+    &.small {
+      background-color: #222326;
+      flex: 0 0 30%;
+      @include noiseBackground;
+      border-radius: 16px;
+      .subtitle {
+        font-size: 22px;
+      }
+      .text-icon {
+        background-color: #ff4d4d;
+        width: 36px;
+        height: 36px;
+      }
+    }
+  }
+
+  &__sharpen {
+    display: flex;
+    gap: 15px;
+    @include noiseBackground;
+    background: url($noise), linear-gradient(90deg, #42312c, #452225);
+    border-radius: 20px;
+    .text-icon {
+      background-color: #ff4d4d;
+    }
+    .text {
+      margin-bottom: 32px;
+    }
+
+    .home__text-block {
+      flex: 0 0 50%;
+       @media (max-width: $l) {
+      flex: 0 0 100%;
+      }
+    }
+  }
+
+  &__cells {
+    margin-top: 1.5rem;
+  }
+
+  .block-title {
+    font-family: 'InputSans', sans-serif;
+    font-size: 3.625rem;
+    line-height: 1.25;
+    font-weight: 300;
+    text-align: center;
+    white-space: break-spaces;
+    margin-bottom: 24px;
+    @media (max-width: $m) {
+      font-size: 3.2rem;
+    }
+    @media (max-width: $s) {
+      font-size: 2.5rem;
+    }
+  }
+
+  .block-text {
+    text-align: center;
+    line-height: 1.25;
+    font-weight: 300;
+    font-size: 1.5rem;
+    @media (max-width: $s) {
+      font-size: 1.2rem;
+    }
+  }
+
+  &__counter {
+    padding: 64px;
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    background-image: url($noise), -webkit-gradient(linear, left top, right top, from(#b07157), to(#b93d3e));
+    background-position: 0, 0, 0 0;
+    background-size: 200px, auto;
+    border-radius: 20px;
+
+    .counter__item {
+      color: white;
+      .title {
+        font-family: 'InputSans', sans-serif;
+        font-size: 5rem;
+        line-height: 1.1;
+        font-weight: 300;
+        text-align: center;
+        @media (max-width: $l) {
+          font-size: 4rem;
+        }
+        @media (max-width: $m) {
+          font-size: 3rem;
+        }
+        @media (max-width: $s) {
+          font-size: 2rem;
+        }
+      }
+
+      .text {
+        text-align: center;
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__blocks {
+    display: flex;
+    justify-content: space-between;
+    gap: 24px;
+    margin-bottom: 80px;
+ 
+    @media (max-width: $m) {
+      flex-direction: column;
+      margin-bottom: 60px;
+    }
+    @media (max-width: $s) {
+      margin-bottom: 40px;
+    }
+  }
+
+}
+
+.noise-image {
+  position: relative;
+  display: flex;
+  align-items: center;
+
+  @media (max-width: $l) {
+   display: none;
+  }
+
+  img {
+    width: 100%;
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    @include noiseBackground;
+  }
+}
+
+.cells {
+  gap: 24px;
+  display: flex;
+
+  @media (max-width: $m) {
+    flex-direction: column;
+  }
+
+    &>div:first-child {
+      flex: 0 1 39%;
+      .noise-image {
+        width: 80%;
+        margin: auto;
+      }
+    }
+
+    &>div:last-child {
+      flex: 0 0 61%;
+
+    }
+
+  &__item {
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    background-color: #222326;
+    overflow: hidden;
+    @include noiseBackground;
+  }
+
+  &_bottom {
+    &>div:first-child {
+      flex: 0 0 61%;
+      .noise-image {
+        margin-bottom: -15px;
+      }
+    }
+
+    &>div:last-child {
+      flex: 0 1 39%;
+      .noise-image {
+        width: 80%;
+        margin: 0 auto;
+        padding-bottom: 20px;
+      }
+    }
+  }
+  
+}

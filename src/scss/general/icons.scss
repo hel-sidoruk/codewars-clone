@@ -1,0 +1,265 @@
+.icon-moon {
+  &.colored {
+    color: #bb432c;
+  }
+  &::before {
+    font-family: 'Icomoon';
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1;
+    font-size: 14px;
+    font-size: inherit;
+  }
+  &-next {
+    &::before {
+      content: "\e015";
+    }
+  }
+  &-compare {
+    margin-right: 5px;
+    &::before {
+      content: "\f0ac";
+    }
+  }
+  &-play {
+    margin-right: 5px;
+    &::before {
+      content: "\e009";
+    }
+  }
+  &-comments {
+    &::before {
+      content: "\f086";
+    }
+  }
+  &-star {
+    margin-right: 5px;
+    opacity: .75;
+    &::before {
+      content: "\e622";
+    }
+  }
+  &-star-empty {
+    margin-right: 5px;
+    opacity: .75;
+    &::before {
+      content: "\e621";
+    }
+  }
+  &-bullseye {
+    margin-right: 5px;
+    opacity: .75;
+    &::before {
+      content: "\e60a";
+    }
+  }
+  &-user {
+    margin-right: 5px;
+    opacity: .75;
+    &::before {
+      content: "\e060";
+    }
+  }
+  &-users {
+    margin-right: 5px;
+    opacity: 1;
+    &::before {
+      content: "\e061";
+    }
+  }
+
+  &-refresh {
+    margin-right: 5px;
+    &::before {
+      content: "\e038";
+    }
+  }
+  &-up {
+    padding: 0 5px;
+
+    &:before {
+      content: "\e625"
+    }
+  }
+  &-expand {
+    &::before {
+      font-size: 24px;
+      content: "\e07c";
+    }
+  }
+  &-collapse {
+    line-height: 32px;
+    margin-right: 5px;
+    font-size: 24px;
+    &::before {
+      content: "\e07d";
+    }
+  }
+  &-javascript {
+    &.solved {
+      color: $light-blue;
+      filter: hue-rotate(290deg);
+    }
+    &.trained {
+      color: $light-blue;
+      filter: hue-rotate(200deg);
+    }
+    margin-right: 5px;
+    &::before {
+      content: "\e640";
+    }
+  }
+  &-tag {
+    margin-right: 5px;
+    color: var(--contrast-text);
+    &::before {
+      content: "\e063";
+    }
+  }
+
+  &-info {
+    margin-right: 5px;
+    color: var(--grey-text);
+    &::before {
+      content: "\e05c";
+    }
+  }
+
+  &-progress {
+    margin-right: 5px;
+    color: $red;
+    &::before {
+      content: "\e91a";
+    }
+  }
+
+  &-contribution {
+    margin-right: 5px;
+    color: $red;
+    &::before {
+      content: "\e91b";
+    }
+  }
+
+  &-terminal {
+    margin-right: 5px;
+    color: $red;
+    &::before {
+      content: "\e905";
+    }
+  }
+
+  &-share {
+    margin-right: 5px;
+    font-size: 50px;
+    &::before {
+      content: "\e600";
+    }
+  }
+  &-bookmark {
+    font-size: 24px;
+    &::before {
+      content: "\f143";
+    }
+  }
+  &-bell {
+    font-size: 24px;
+    &::before {
+      content: "\e90c";
+    }
+  }
+  &-settings {
+    margin-right: 5px;
+    &::before {
+      content: "\e00e";
+    }
+  }
+  &-power {
+    margin-right: 5px;
+    &::before {
+      content: "\f11d";
+    }
+  }
+  &-unlock {
+    margin-right: 5px;
+    &::before {
+      content: "\e055";
+    }
+  }
+  &-x {
+    &::before {
+      content: "\e042";
+    }
+  }
+  &-flag {
+    margin-right: 5px;
+    &::before {
+      content: "\e000";
+    }
+  }
+  &-down {
+    margin-left: 5px;
+    &::before {
+      content: "\e624";
+    }
+  }
+  &-question {
+    margin-right: 5px;
+    &::before {
+      content: "\e62d";
+    }
+  }
+  &-enhancement {
+    margin-right: 5px;
+    &::before {
+      content: "\e62e";
+    }
+  }
+  &-issue {
+    margin-right: 5px;
+    &::before {
+      content: "\e602";
+    }
+  }
+  &-edit {
+    margin-right: 5px;
+    &::before {
+      content: "\e053";
+    }
+  }
+  &-trash {
+    margin-right: 5px;
+    &::before {
+      content: "\e006";
+    }
+  }
+  &-ranks2 {
+      margin-right: 5px;
+      &::before {
+        content: "\e904";
+      }
+  }
+  &-honor {
+    margin-right: 5px;
+    &::before {
+      content: "\e911";
+    }
+  }
+  &-follow {
+    margin-right: 5px;
+    &::before {
+      content: "\e64f";
+    }
+  }
+  &-clan {
+    margin-right: 5px;
+    &::before {
+      content: "\e628";
+    }
+  }
+}
+
+.fake-avatar {
+  width: 30px;
+  height: 30px;
+}

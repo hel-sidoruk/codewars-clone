@@ -1,0 +1,94 @@
+.rank-breakdown {
+
+  &__chart {
+    position: relative;
+    width: 200px;
+
+    &.white {
+      .pie-color {
+        stroke: $light;
+      }
+    }
+
+    &.yellow {
+      .pie-color {
+        stroke: $yellow;
+      }
+    }
+
+    &.blue {
+      .pie-color {
+        stroke: $blue;
+      }
+    }
+
+    &.purple {
+      .pie-color {
+        stroke: $purple;
+      }
+    }
+  }
+
+  &__next {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 5px;
+  }
+
+  &__wrapper {
+    display: flex;
+    gap: 10px;
+
+    @media (max-width: $s) {
+      align-items: center;
+    }
+  }
+}
+
+.honor-breakdown {
+  padding-right: 40px;
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+  }
+
+  &__item {
+    position: relative;
+    padding: 4px 8px;
+    background: var(--border-color);
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 16px;
+    letter-spacing: 0.3px;
+    .progress {
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      z-index: 0;
+      transform-origin: left;
+      background-color: #bb432c;
+      animation: filling 1.4s ease-in-out;
+    }
+    .text {
+      position: relative;
+      z-index: 1;
+    }
+  }
+}
+@keyframes filling {
+  0% {
+    transform: scaleX(0);
+  }
+  100% {
+    transform: scaleX(1);
+  }
+}

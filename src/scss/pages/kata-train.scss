@@ -1,0 +1,179 @@
+.kata-train {
+  display: flex;
+  flex-grow: 1;
+  height: calc(100% - 136px);
+  gap: 16px;
+
+  @media (max-width: $m) {
+    flex-direction: column;
+    height: auto;
+  }
+
+  &__info {
+    width: 42%;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+
+    @media (max-width: $m) {
+      width: 100%;
+    }
+  }
+  &__descr {
+    flex-grow: 1;
+    border-radius: 8px;
+    background-color: var(--bg-section);
+    color: var(--contrast-text);
+    padding: 16px;
+    overflow-y: auto;
+    @include scrollBar(10px);
+  }
+  &__tests {
+    display: flex;
+    flex-grow: 1;
+  }
+  &__descr,
+  &__tests {
+    @media (max-width: $m) {
+      opacity: 0;
+      max-height: 0;
+      padding: 0;
+      transition: max-height 0.5s, opacity 0.5s, padding 0.5s;
+      &._open {
+        opacity: 1;
+        max-height: 100vh;
+        padding: 16px;
+
+      }
+    }
+  }
+  &__code {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    max-width: 58%;
+
+    @media (max-width: $m) {
+      max-width: 100%;
+      flex-shrink: 0;
+    }
+  }
+}
+.solution {
+  flex-grow: 1;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  height: inherit;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 20px;
+  &__top {
+    background-color: var(--bg-section);
+    padding: 8px;
+    &-text {
+      font-size: 14px;
+      font-weight: 700;
+      line-height: 20px;
+      color: var(--contrast-text);
+    }
+  }
+}
+
+.code {
+  height:calc(100% - 36px);
+  display: flex;
+  flex-grow: 1;
+  padding: 5px 0;
+  font-family: 'CamingoCode', monospace;
+  background: var(--bg-textarea);
+  &__line-counter {
+    width: 40px;
+    height: 100%;
+    font-size: 14px;
+    line-height: 17.5px;
+    color: var(--grey-text);
+    border-right: 1px solid var(--border-color);
+    padding-bottom: 10px;
+    overflow-y: auto;
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+    span {
+      text-align: right;
+      width: 29px;
+      padding-right: 3px;
+      display: block;
+      padding-left: 5px;
+    }
+  }
+  &__editor-wrapper {
+    flex-grow: 1;
+    position: relative;
+    color: var(--contrast-text);
+    overflow-x: auto;
+    @include scrollBar(8px);
+    &::-webkit-scrollbar {
+      height: 8px;
+    }
+    line-height: 17.5px;
+  }
+  &__editor {
+    color: transparent;
+    font-size: inherit;
+    line-height: inherit;
+    caret-color: var(--contrast-text);
+    background-color: transparent;
+    outline: none;
+    border: none;
+    resize: none;
+    @include scrollBar(10px);
+  }
+  pre {
+    &::-webkit-scrollbar {
+      width: 0;
+    }
+  }
+  .code__editor, pre {
+    padding: 0 5px;
+    overflow-y: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    padding-bottom: 10px;
+  }
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 5px;
+    flex-wrap: wrap;
+
+    &-actions,
+    &-tests {
+      display: flex;
+      gap: 5px;
+    }
+
+    &-tests {
+      .btn {
+        width: 80px;
+      }
+      &.disabled {
+        filter: grayscale(1);
+        pointer-events: none;
+        opacity: 0.8;
+      }
+    }
+  }
+}
+.past-solutions {
+  position: relative;
+  pre {
+    border-radius: 0;
+    border: 1px solid var(--border-color);
+  }
+}

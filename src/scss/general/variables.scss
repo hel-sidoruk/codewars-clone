@@ -1,0 +1,98 @@
+body._light {
+    --bg-color: #dddddd;
+    --bg-section:#ececee; //section
+    --grey-text: #3f3f46; //input-text, вообще практически весь текст, который в темной теме был серым
+    --contrast-text: #27272a;
+    --empty-btn-hover: #fafafa; //dark-hover
+    --blue: #3b82f6;
+    --bg-textarea: #ffffff;
+    --border-color: #bebec0;
+    --dropdown-hover: rgba(0, 0, 0, 0.1);
+    --similar-color: #efefef; //light
+    --rank-white:#bdbdbd;
+    --modal-overlay:  rgba(239, 239, 239, 0.8);
+    --scroll: #969696;
+
+    .kata-item {
+      --tw-shadow: 0 4px 6px -1px rgb(0 0 0 / .1), 0 2px 4px -2px rgb(0 0 0 / .1);
+      --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);
+      box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000),var(--tw-ring-shadow, 0 0 #0000),var(--tw-shadow);
+    }
+  } 
+  
+  body._dark {
+    --bg-color: #16171b;
+    --bg-section:#222327; //section
+    --grey-text: #b6b6be; //input-text
+    --contrast-text: #efefef;
+    --empty-btn-hover: #0b0707; //dark-hover
+    --blue: #6795de;
+    --bg-textarea: #131414; //dark
+    --border-color: #383737;
+    --dropdown-hover: rgba(255, 255, 255, 0.1);
+    --similar-color: #131414; //dark
+    --rank-white:#e6e6e6; 
+    --modal-overlay: rgba(19, 20, 20, 0.8);
+    --scroll: #404040;
+  }
+
+// ---- header-home
+$light: #efefef; 
+$grey: #c0c0c0;
+// --------------
+
+$dark: #131414;
+$sidebar-bg: #121216;
+
+$filters-accent: #27bafd;
+$blue: #6795de;
+$light-blue: #7ca4e3;
+$blue-hover: #91b2e7;
+$rank-blue: #1f87e7;
+
+
+$success: #67b04b;
+$dark-hover: #0b0707;
+$yellow: #ecb613;
+$purple: #866cc7;
+$red: #bb432c;
+
+$success-btn: #7c9a44;
+$purple-text: #b294bb;
+$green-text: #b5bd68;
+$orange-text: #de935f;
+$red-text: #dc7069;
+$blue-text: #89b6c5;
+$grey-text: #969896;
+
+
+$mini-border-radius: .25rem;
+$noise: 'https://uploads-ssl.webflow.com/62e3ee10882dc50bcae8d07a/631a5d4631d4c55a475f3e34_noise-50.png';
+$header-height: 64px;
+
+
+// breakpoints
+
+$xs: 576px;
+$s: 768px;
+$m: 992px;
+$l: 1200px;
+$xl: 1400px;
+
+@mixin scrollBar($width) {
+  &::-webkit-scrollbar {
+    width: $width;
+    background: var(--bg-section);
+    height: 6px;
+  }
+  &::-webkit-scrollbar-thumb {
+    border-radius: 10px;
+    background: var(--scroll);
+  }
+}
+
+@mixin noiseBackground {
+  background-image: url($noise);
+  background-position: 0 0;
+  background-size: 200px;
+}

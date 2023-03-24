@@ -1,0 +1,45 @@
+.article {
+  max-width: 300px;
+  background: var(--bg-section);
+  border-radius: 10px;
+  display: flex;
+  
+  padding: 14px;
+
+  &__link {
+    display: flex;
+    gap: 10px;
+    width: 100%;
+
+    &:hover {
+      .article__description {
+        color: var(--blue);
+      }
+    }
+  }
+
+ &__preview {
+   border-radius: 4px;
+   overflow: hidden;
+   max-width: 120px;
+
+   img {
+    border-radius: 4px;
+    height: auto;
+    object-position: center;
+    object-fit: cover;
+    width: 100%;
+   }
+  }
+
+  &__title {
+    font-weight: 700;
+    color: var(--blue);
+    margin-bottom: 10px;
+  }
+
+  &__description {
+    transition: color 0.5s;
+  }
+
+}

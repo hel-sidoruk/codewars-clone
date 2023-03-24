@@ -1,0 +1,248 @@
+.dashboard-wrapper {
+  display: flex;
+  min-height: 180px;
+
+  @media (max-width: $m) {
+   flex-direction: column;
+  }
+
+  &__sidebar {
+   width: 160px;
+    border-right: 1px solid var(--border-color);
+    padding-right: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+
+    @media (max-width: $m) {
+      border-right: none;
+      border-bottom: 1px solid var(--border-color);
+      width: 100%;
+      padding-bottom: 10px;
+      margin-bottom: 10px;
+     }
+
+    a {
+      &._opened {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__content {
+    position: relative;
+    padding-left: 20px;
+    flex-grow: 1;
+    .kata-item {
+      &:not(:last-child) {
+        margin-bottom: 24px;
+      }
+    }
+
+    @media (max-width: $s) {
+      .comment {
+      &__header {
+        flex-direction: column;
+        align-items: start;
+        gap: 5px;
+      }
+    }
+    }
+    
+  }
+}
+
+.user-stats {
+  &__tabs {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 8px;
+
+    @media (max-width: $s) {
+      flex-wrap: wrap;
+    }
+  }
+
+  &__tab {
+    padding: 12px;
+    cursor: pointer;
+    transition: color 0.3s;
+
+    &:hover {
+      color: var(--blue);
+    }
+    &.active {
+      pointer-events: none;
+      background: var(--bg-section);
+      border-radius: 10px;
+    }
+  }
+  &__stats {
+    background: var(--bg-section);
+    border-radius: 10px;
+    padding: 20px 12px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.stats {
+  line-height: 150%;
+  min-height: 240px;
+  position: relative;
+  .loader {
+    transform: translate(-50%, -35%);
+  }
+  &__progress,
+  &__contributions,
+  &__breakdowns {
+    display: grid;
+    gap: 12px;
+    grid-template-columns: 90px 3fr 3fr;
+    grid-template-rows: repeat(2, auto);
+    margin-bottom: 50px;
+  }
+
+  &__progress,
+  &__contributions {
+    @media (max-width: $m) {
+      grid-template-rows: auto;
+    }
+    @media (max-width: $s) {
+      grid-template-columns: 1fr 1fr;
+      gap: 20px;
+    }
+
+    @media (max-width: $xs) {
+      grid-template-columns: 100%;
+      gap: 20px;
+    }
+  }
+
+  &__breakdowns {
+    @media (max-width: $s) {
+      display: flex;
+      flex-direction: column;
+    }
+  }
+
+  &__contributions {
+    margin-bottom: 30px;
+  }
+
+  &__breakdowns {
+    grid-template-rows: auto;
+  }
+
+  &__refresh {
+    background: var(--border-color);
+    padding: 8px;
+    border-radius: 3px;
+    margin-bottom: 25px;
+  }
+
+  &__langs {
+    grid-column: 3/4;
+    grid-row: 2/3;
+
+    @media (max-width: $xs) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+  }
+
+  &__progress-value {
+    grid-column: 2/3;
+    grid-row: 2/3;
+
+    @media (max-width: $s) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+  }
+
+  &__title {
+    grid-column: 2 / 3;
+    grid-row: 1 / 2;
+    font-size: 20px;
+    
+
+    @media (max-width: $s) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      align-self: center;
+      margin-left: 70px;
+    }
+  }
+
+  &__subtitle {
+    margin-bottom: 8px;
+    font-size: 16px;
+    &~div:not(.rank-breakdown__wrapper) {
+      margin-left: 20px;
+    }
+  }
+
+  &__icon {
+    grid-column: 1 / 2;
+    grid-row: 1 / 3;
+    justify-self: center;
+
+    @media (max-width: $s) {
+      grid-column: 1/2;
+      grid-row: 1/2;
+      justify-self: start;
+      float: right;
+    }
+  }
+
+  &__community {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+    @media (max-width: $s) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    @media (max-width: $xs) {
+      grid-column: 1/2;
+      grid-row: 2/3;
+    }
+    
+  }
+
+  &__kata {
+    grid-column: 3 / 4;
+    grid-row: 2 / 3;
+
+    @media (max-width: $xs) {
+      grid-column: 1/2;
+      grid-row: 3/4;
+    }
+  }
+
+  &__top-tags {
+    grid-column: 4 / 5;
+    grid-row: 2 / 3;
+    @media (max-width: $s) {
+      grid-column: 1/2;
+      grid-row: 4/5;
+    }
+  }
+
+  &__honor-breakdown {
+    grid-column: 2 / 3;
+
+    @media (max-width: $s) {
+      margin-bottom: 30px;
+    }
+  }
+
+  &__rank-breakdown {
+    grid-column: 3 / 4;
+    
+  }
+._opened-tab {
+    cursor: default;
+    background: var(--bg-section)
+}
+}

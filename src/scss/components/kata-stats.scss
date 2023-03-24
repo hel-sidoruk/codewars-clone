@@ -1,0 +1,18 @@
+.kata-stats {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  &__block {
+    line-height: 23px;
+    color: var(--contrast-text);
+    padding: 4px;
+  }
+  &__item {
+    padding: 4px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    &:not(:last-child) {
+      border-bottom: 1px solid var(--border-color);
+    }
+  }
+}

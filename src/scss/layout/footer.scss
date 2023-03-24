@@ -1,0 +1,66 @@
+.footer {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 0 68px;
+  border-top: 1px solid var(--border-color);
+  background-color: var(--bg-color);
+  background-image: url($noise);
+  background-position: 0 0;
+  background-size: 200px;
+  color: var(--contrast-text);
+
+  &__githubs {
+    display: flex;
+    gap: 1.5rem;
+    color: var(--grey-text);
+    margin-left: 1rem;
+
+    @media (max-width: $s){
+      flex-direction: column;
+      border-left: 1px solid var(--border-color);
+      padding-left: 15px;
+    }
+
+    a {
+      display: flex;
+      align-items: center;
+      gap: 7px;
+    }
+    svg {
+      fill: var(--grey-text);
+    }
+  }
+
+  &__content {
+    max-width: 1280px;
+    width: 100%;
+    padding: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    
+    @media (max-width: $m){
+      flex-direction: column;
+    }
+  }
+  &__block {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+    font-size: 16px;
+  }
+  a {
+    transition: .3s;
+    &:hover {
+      filter: brightness(1.4);
+    }
+
+    @media (max-width: $s){
+      svg {
+        width: 80px;
+      }
+    }
+  }
+}

@@ -1,0 +1,46 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 10;
+  background-color: var( --modal-overlay);
+  &__content {
+    position: fixed;
+    top: 30%;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: var(--bg-color);
+    border: 1px solid var(--border-color);
+    width: 580px;
+    z-index: 11;
+    padding: 15px;
+    color: var(--contrast-text);
+    font-size: 16px;
+  }
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 5px;
+    margin-bottom: 15px;
+  }
+  &__body {
+    padding: 15px 0;
+    margin-bottom: 15px;
+    border-top: 1px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
+    line-height: 24px;
+  }
+  &__footer {
+    display: flex;
+    gap: 15px;
+  }
+  .icon-moon {
+    color: var(--contrast-text);
+    transition: color .2s ease-in-out;
+    &:hover {
+      color: var(--blue);
+    }
+  }
+}

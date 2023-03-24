@@ -1,0 +1,123 @@
+.rank {
+  width: 34px;
+  height: 26px;
+  color: rgba(20, 20, 20, .7);
+  position: relative;
+  margin: 0 8px;
+  text-align: center;
+  font-weight: 700;
+  z-index: 1;
+  text-shadow: none;
+  line-height: 28px;
+  font-size: 12px;
+  &::before {
+    content: "";
+    width: 0;
+    height: 0;
+    border-right: 8px solid;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    position: absolute;
+    left: -8px;
+    z-index: 0;
+  }
+  &::after {
+    content: "";
+    width: 0;
+    position: absolute;
+    right: -8px;
+    top: 0;
+    border-left: 8px solid;
+    border-top: 13px solid transparent;
+    border-bottom: 13px solid transparent;
+    z-index: 0;
+  }
+  &__inner {
+    width: 32px;
+    height: 22px;
+    background-color: var(--bg-section);
+    position: relative;
+    margin-right: 6px;
+    text-align: center;
+    line-height: 22px;
+    z-index: 1;
+    text-shadow: none;
+    margin-left: 1px;
+    top: 2px;
+    font-size: 11px;
+    &::before {
+      content: "";
+      width: 0;
+      height: 0;
+      border-right: 6px solid var(--bg-section);
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      position: absolute;
+      left: -6px;
+      z-index: 0;
+    }
+    &::after {
+      content: "";
+      width: 0;
+      position: absolute;
+      right: -6px;
+      top: 0;
+      border-left: 6px solid var(--bg-section);
+      border-top: 11px solid transparent;
+      border-bottom: 11px solid transparent;
+      z-index: 2
+    }
+    span {
+      z-index: 2;
+      position: relative;
+    }
+  }
+  &.white {
+    background-color: var(--rank-white);
+    &::before {
+      border-right-color: var(--rank-white);
+    }
+    &::after {
+      border-left-color:var(--rank-white);
+    }
+    .rank__inner {
+      color: var(--rank-white);
+    }
+  }
+  &.yellow {
+    background-color: $yellow;
+    &::before {
+      border-right-color: $yellow;
+    }
+    &::after {
+      border-left-color: $yellow;
+    }
+    .rank__inner {
+      color: $yellow;
+    }
+  }
+  &.blue {
+    background-color: $rank-blue;
+    &::before {
+      border-right-color: $rank-blue;
+    }
+    &::after {
+      border-left-color: $rank-blue;
+    }
+    .rank__inner {
+      color: $rank-blue;
+    }
+  }
+  &.purple {
+    background-color: $purple;
+    &::before {
+      border-right-color: $purple;
+    }
+    &::after {
+      border-left-color: $purple;
+    }
+    .rank__inner {
+      color: $purple;
+    }
+  }
+}

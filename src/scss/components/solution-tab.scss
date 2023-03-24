@@ -1,0 +1,62 @@
+.solutions-tab {
+  &__list {
+    display: flex;
+    max-width: calc(1024px - 172px);
+    flex-direction: column;
+    gap: 20px;
+  }
+}
+
+.solutions-one {
+  &__header {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    margin-bottom: 20px;
+  }
+
+  &__name {
+    font-size: 18px;
+  }
+
+  &__lang {
+    font-size: 16px;
+    margin-bottom: 20px;
+  }
+
+  &__code {
+    background: var(--bg-textarea);
+    overflow-x: auto;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 1.7142857;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    padding: 10px 15px;
+    @include scrollBar(10px);
+
+    code {
+
+    @media (max-width: $m) {
+      overflow-x: scroll;
+    }
+    }
+
+
+  }
+
+  &__footer {
+    display: flex;
+    gap: 10px;
+  }
+
+  &__link {
+    color: $light-blue;
+  }
+  a {
+    transition: color 0.3s;
+  }
+  a:hover {
+    color: $blue-hover;
+  }
+}

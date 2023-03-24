@@ -1,0 +1,142 @@
+.account-settings {
+  max-width: 1024px;
+  margin: 0 auto;
+  padding-top: 50px;
+  .title {
+    font-weight: 700;
+    text-transform: uppercase;
+    line-height: 21px;
+    font-size: 14px;
+    color: var(--contrast-text);
+    margin-bottom: 16px;
+  }
+  .text {
+    line-height: 1.6;
+  }
+  .delete-btn {
+    margin: 12px 0;
+  }
+  .input {
+    border-radius: 4px;
+    font-size: 14px;
+    line-height: 16px;
+    transition: background-color .2s ease-in-out;
+    background-color: rgba(#000, 0.1);
+    padding: 7px;
+    color: var(--contrast-text);
+    height: 34px;
+    outline: none;
+    display: block;
+    width: 100%;
+    &:hover {
+      background-color: #000;
+    }
+    &:focus {
+      background-color: $dark;
+      border: 1px solid rgba(#000, 0.4);
+      box-shadow: 0 0 2px var(--contrast-text);
+    }
+  }
+  .label {
+    border-radius: 4px;
+    padding: 4px;
+    cursor: pointer;
+    margin-bottom: 8px;
+    background-color:var(--scroll);
+    color: #ebebeb;
+    line-height: 21px;
+    font-size: 14px;
+    display: inline-block;
+  }
+  .file-upload {
+    display: flex;
+    gap: 12px;
+    .avatar {
+      flex-shrink: 0;
+    }
+    .input {
+      display: none;
+    }
+    .btn {
+      cursor: pointer;
+    }
+    &__field {
+      height: 65px;
+      flex-grow: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 16px;
+      gap: 16px;
+      border-radius: 4px;
+      border: 1px dashed rgba(#fff, 0.6);
+      padding: 6px 12px;
+
+      @media (max-width: $s) {
+        width: 100%;
+      }
+
+      span {
+        max-width: 35%;
+        overflow: hidden;
+        text-overflow: ellipsis;
+      }
+      &.active {
+        background-color: rgba(#fff, 0.1);
+      }
+    }
+    &__image {
+      width: 55px;
+      height: 55px;
+      object-fit: cover;
+    }
+  }
+  .form {
+    position: relative;
+    z-index: 1;
+    &__loader {
+      position: absolute;
+      top: -16px;
+      right: -16px;
+      left: -16px;
+      bottom: -16px;
+      z-index: 10;
+      background-color: var(--modal-overlay);
+    }
+    &__success {
+      position: absolute;
+      top: -60px;
+      left: 0;
+      background-color: $success-btn;
+      font-size: 16px;
+      padding: 8px 14px;
+      transition: all .3s ease-in-out;
+      transform: translateY(0);
+      opacity: 1;
+      z-index: 0;
+      pointer-events: none;
+      &.hidden {
+        transform: translateY(16px);
+        opacity: 0;
+      }
+    }
+    &__content {
+      display: grid;
+      gap: 16px;
+      align-items: center;
+      margin-bottom: 14px;
+      grid-template-columns: repeat(2, 1fr);
+
+      @media (max-width: $s) {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+      }
+    }
+  }
+  &__section {
+    &:not(:last-child) {
+      margin-bottom: 24px;
+    }
+  }
+}

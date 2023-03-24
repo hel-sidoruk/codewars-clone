@@ -1,0 +1,46 @@
+.hljs {
+  overflow-x: auto;
+  color: var(--contrast-text);
+}
+
+.hljs-comment,
+.hljs-quote {
+  color: var(--grey-text);
+}
+
+.hljs-number,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link,
+.hljs-title,
+.hljs-section {
+  color: $orange-text;
+}
+.hljs-built_in,
+.hljs-builtin-name {
+  color: $blue-text;
+}
+.hljs-literal {
+  color: $red-text;
+}
+
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition,
+.hljs-regexp {
+  color: $green-text;
+}
+
+.hljs-keyword {
+  color: $purple-text;
+}
+
+.hljs-emphasis {
+  font-style: italic;
+}
+
+.hljs-strong {
+  font-weight: bold;
+}

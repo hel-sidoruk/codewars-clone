@@ -1,0 +1,119 @@
+.sidebar {
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  width: 55px;
+  background-color: $sidebar-bg;
+  z-index: 1000;
+  overflow: hidden;
+  padding: 12px 0;
+  .logo {
+    width: 36px;
+    height: 36px;
+  }
+  &__content {
+    margin-left: 12px;
+    padding-right: 8px;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+  }
+  &__label {
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 700;
+    transition: all .2s ease-in-out;
+  }
+  &__descr {
+    font-size: 12px;
+    line-height: 16px;
+    color: #a1a1a1;
+  }
+  &__section {
+    margin-bottom: 4px;
+    transition-property: transform, color, border-bottom, padding, background-color;
+    transition-duration: .3s;
+    transition-timing-function: ease-in;
+    color: transparent;
+    background-color: rgba(#fff, 0.15);
+    width: 8px;
+    height: 16px;
+    border-radius: 8px;
+    margin-left: 18px;
+    padding: 0 8px 0 12px;
+    font-size: 12px;
+    line-height: 16px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    transform: scale(.5);
+  }
+  &:hover {
+    transition: all .3s ease-in;
+    width: 320px;
+    border-right: 1px solid #ffffff1a;
+    .sidebar__section {
+      color: #a1a1a1;
+      background-color: transparent;
+      margin-left: 0;
+      padding-left: 12px;
+      width: inherit;
+      height: inherit;
+      transform: scale(1);
+    }
+    .sidebar__content {
+      opacity: 1;
+    }
+  }
+  &__icon {
+    transition: fill .2s ease-in-out;
+    fill: $grey;
+    padding-top: 4px;
+    width: 34px;
+    flex-shrink: 0;
+    max-width: 24px;
+    margin-left: 6px;
+    &.stroke {
+      fill: none !important;
+      stroke: $grey;
+    }
+  }
+  &__item {
+    min-width: 320px;
+    a {
+      padding: 2px 8px;
+      font-size: 14px;
+      line-height: 21px;
+      display: flex;
+      align-items: center;
+      width: 320px;
+      color: $grey;
+      transition: background-color .2s ease-in-out;
+      &:hover {
+        background-color: rgba(#fff, 0.1);
+        .sidebar__label {
+          color: $blue;
+        }
+        .sidebar__icon {
+          fill: $blue;
+          &.stroke {
+            stroke: $blue;
+          }
+        }
+      }
+      &.link-active {
+        pointer-events: none;
+        .sidebar__label {
+          color: #fff;
+        }
+        .sidebar__icon {
+          fill: #fff;
+          &.stroke {
+            stroke: #fff;
+          }
+        }
+      }
+    }
+  }
+
+}
